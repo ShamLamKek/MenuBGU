@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MenuBGU.Models.Food>
+@{
+    ViewData["Title"] = "Холодные закуски";
+    Layout = "_Layout";
+}
+<table class="table-condensed">
+    <tr>
+        <td>Код</td>
+        <td>Название</td>
+        <td>Цена</td>
+    </tr>
+   @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Code</td>
+        <td>@item.Name</td>
+        <td>@item.Price</td>
+    </tr>
+    }
+</table>
